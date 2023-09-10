@@ -1,0 +1,6 @@
+D:\C#\CAD2016\rdtxt\bin\Debug\rdtxt.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\rdtxt.pdb
+D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.csproj.AssemblyReference.cache
+D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.csproj.CoreCompileInputs.cache
+D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.dll
+D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.pdb
