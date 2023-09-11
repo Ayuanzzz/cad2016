@@ -64,7 +64,6 @@ namespace rdtxt
             {
                 return result.StringResult;
             }
-
             return null;
         }
         //遍历所有dwg文件
@@ -75,9 +74,6 @@ namespace rdtxt
                 ProcessDWGFile(filePath, searchText, replaceText);
                 Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(filePath+"\n");
                 // 关闭文档
-                //Document doc = Application.DocumentManager.MdiActiveDocument;
-                //string command = "CD";
-                //doc.SendStringToExecute(command + "\n", true, false, false);
                 DocumentCollection docs = Application.DocumentManager;
                 foreach (Document Adoc in docs)
                 {
@@ -119,5 +115,7 @@ namespace rdtxt
 
             m_DocumentLock.Dispose();
         }
+
+        
     }
 }

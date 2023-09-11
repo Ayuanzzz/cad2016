@@ -4,3 +4,13 @@ D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.csproj.AssemblyReference.cache
 D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.csproj.CoreCompileInputs.cache
 D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.dll
 D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.pdb
+D:\C#\CAD2016\rdtxt\bin\Debug\ExcelApi.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\NetOffice.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\OfficeApi.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\VBIDEApi.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\ExcelApi.xml
+D:\C#\CAD2016\rdtxt\bin\Debug\NetOffice.xml
+D:\C#\CAD2016\rdtxt\bin\Debug\OfficeApi.xml
+D:\C#\CAD2016\rdtxt\bin\Debug\VBIDEApi.xml
+D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.csproj.CopyComplete
+D:\C#\CAD2016\rdtxt\bin\Debug\stdole.dll
