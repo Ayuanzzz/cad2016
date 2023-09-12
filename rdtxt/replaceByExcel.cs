@@ -33,9 +33,6 @@ namespace rdtxt
             }
 
             GetDataFromExcel(fileName,rootDirectory);
-            
-            
-
         }
 
         //读取excel
