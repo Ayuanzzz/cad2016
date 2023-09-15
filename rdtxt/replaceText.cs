@@ -18,18 +18,6 @@ namespace rdtxt
 {
     public class replaceText
     {
-        //[CommandMethod("OpenTxt")]
-        //public void OpenTxt()
-        //{
-        //    Wnd.OpenFileDialog openDlg=new Wnd.OpenFileDialog();
-        //    openDlg.Title = "打开数据文件";
-        //    openDlg.Filter = "文本文件(*.txt)|*.txt";
-        //    Wnd.DialogResult openRes = openDlg.ShowDialog();
-        //    if(openRes==Wnd.DialogResult.OK) 
-        //    {
-        //        string[] contents=File.ReadAllLines(openDlg.FileName);
-        //    }
-        //}
         [CommandMethod("ReplaceText")]
         public void ReplaceText()
         {

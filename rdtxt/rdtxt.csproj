@@ -80,10 +80,15 @@
   <ItemGroup>
     <Compile Include="center.cs" />
     <Compile Include="colorBylayer.cs" />
+    <Compile Include="help.cs" />
+    <Compile Include="modifyType.cs" />
     <Compile Include="replaceByExcel.cs" />
     <Compile Include="replaceText.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="closeDWG.cs" />
+    <Compile Include="splitText.cs" />
+    <Compile Include="TypedValueList.cs" />
+    <Compile Include="XData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
