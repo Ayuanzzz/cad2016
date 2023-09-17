@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace rdtxt
 {
-    public class test
+    public class breakLine
     {
-        [CommandMethod("CurveBoolean")]
-        public void CurveBoolean()
+        [CommandMethod("BRPL")]
+        public void BreakPolyline()
         {
             ObjectIdCollection polyIds = new ObjectIdCollection();
             if (PromptSelectEnts("\n请选择:", "LWPOLYLINE", ref polyIds))
