@@ -26,6 +26,8 @@ namespace rdtxt
             editor.WriteMessage("CD--关闭所有层\n");
 
             editor.WriteMessage("BRPL--打断相交线\n");
+
+            editor.WriteMessage("AWPL--添加掩膜");
             
         }
     }
