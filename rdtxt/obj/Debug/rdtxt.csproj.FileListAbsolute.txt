@@ -14,3 +14,5 @@ D:\C#\CAD2016\rdtxt\bin\Debug\OfficeApi.xml
 D:\C#\CAD2016\rdtxt\bin\Debug\VBIDEApi.xml
 D:\C#\CAD2016\rdtxt\obj\Debug\rdtxt.csproj.CopyComplete
 D:\C#\CAD2016\rdtxt\bin\Debug\stdole.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\DotNetArX.dll
+D:\C#\CAD2016\rdtxt\bin\Debug\DotNetArX.pdb

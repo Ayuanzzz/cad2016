@@ -4,3 +4,15 @@
 
 09/13/2023 at 17:22:06.536  图形: D:\C#\data\4592.0-423.0.dwg
 -------------
+
+
+致命错误:  Unhandled Access Violation Reading 0x0000 Exception at 8859dd1fh
+
+09/27/2023 at 17:27:17.965  图形: D:\Python\data\testData\1.dwg
+-------------
+
+
+内部错误:  !dbobji.cpp@8615: eNotOpenForWrite
+
+10/17/2023 at 10:14:32.405  图形: D:\C#\data\cassT.dwg
+-------------

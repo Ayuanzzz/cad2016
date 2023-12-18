@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Application = Autodesk.AutoCAD.ApplicationServices.Application;
+using DotNetArX;
 
 namespace rdtxt
 {
@@ -111,34 +112,5 @@ namespace rdtxt
                 tr.Commit();
             }
         }
-
-        //[CommandMethod("Test")]
-        //public void Test()
-        //{
-        //    Document doc = Application.DocumentManager.MdiActiveDocument;
-        //    Editor ed = doc.Editor;
-
-        //    TypedValueList values = new TypedValueList();
-
-        //    values.Add(DxfCode.ExtendedDataRegAppName, "SOUTH");
-        //    values.Add(1000, "200009");
-
-
-
-        //    SelectionFilter filter = new SelectionFilter(values);
-        //    PromptSelectionResult psr = ed.SelectAll(filter);
-
-        //    if (psr.Status != PromptStatus.OK) return;
-        //    SelectionSet ss = psr.Value;
-        //    using (Transaction tr = doc.TransactionManager.StartTransaction())
-        //    {
-        //        foreach (ObjectId id in ss.GetObjectIds())
-        //        {
-        //            Entity ent = (Entity)tr.GetObject(id, OpenMode.ForWrite);
-        //            ent.ColorIndex = 1;
-        //        }
-        //        tr.Commit();
-        //    }
-        //}
     }
 }

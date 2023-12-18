@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using DotNetArX;
 
 namespace rdtxt
 {
@@ -19,10 +20,10 @@ namespace rdtxt
 
         public void AWPL()
         {
-            //AddWipeoutToPolyline("202101");
-            //AddWipeoutToPolyline("180009");
-            //AddWipeoutToPolyline("160009");
-            AddWipeoutToPolyline("141161");
+            AddWipeoutToPolyline("202101");
+            AddWipeoutToPolyline("180009");
+            AddWipeoutToPolyline("160009");
+            AddWipeoutToPolyline("170009");
             DrawOrder("WIPEOUT", null);
             DrawOrder("LWPOLYLINE", "201101");
             DrawOrder("LWPOLYLINE", "201102");
@@ -52,7 +53,7 @@ namespace rdtxt
                 foreach (ObjectId id in ss.GetObjectIds())
                 {
                     Polyline polyline = (Polyline)tr.GetObject(id, OpenMode.ForWrite);
-                    if (polyline != null)
+                    if (polyline != null && polyline.Closed)
                     {
                         // 创建wipeout
                         Wipeout wipeout = new Wipeout();
@@ -76,6 +77,7 @@ namespace rdtxt
                 tr.Commit();
             }
         }
+
         public Point2dCollection GetPolylineVertices(Database db, Editor ed, ObjectId id)
         {
             using (Transaction tr = db.TransactionManager.StartTransaction())
@@ -83,7 +85,8 @@ namespace rdtxt
                 // 打开多段线以进行读取
                 Polyline polyline = tr.GetObject(id, OpenMode.ForRead) as Polyline;
 
-                if (polyline != null)
+                
+                if (polyline != null && polyline.Closed)
                 {
                     // 获取多段线的所有节点坐标并转换为Point2d
                     Point2dCollection pts = new Point2dCollection();
@@ -142,6 +145,54 @@ namespace rdtxt
                 }
             }
 
+        }
+
+        [CommandMethod("CheckPolylineClosure")]
+        public void CheckPolylineClosure()
+        {
+            Document doc = Application.DocumentManager.MdiActiveDocument;
+            Database db = doc.Database;
+            Editor editor = doc.Editor;
+
+            // 提示用户选择多段线
+            PromptEntityOptions options = new PromptEntityOptions("\n选择多段线: ");
+            options.SetRejectMessage("\n请选择一个多段线。");
+            options.AddAllowedClass(typeof(Polyline), true);
+
+            PromptEntityResult result = editor.GetEntity(options);
+
+            if (result.Status != PromptStatus.OK)
+            {
+                editor.WriteMessage("\n未选择多段线。");
+                return;
+            }
+
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                // 打开选定的多段线
+                Polyline polyline = tr.GetObject(result.ObjectId, OpenMode.ForRead) as Polyline;
+
+                if (polyline != null)
+                {
+                    // 检查多段线是否闭合
+                    bool isClosed = polyline.Closed;
+
+                    if (isClosed)
+                    {
+                        editor.WriteMessage("\n所选多段线是闭合的。");
+                    }
+                    else
+                    {
+                        editor.WriteMessage("\n所选多段线不是闭合的。");
+                    }
+                }
+                else
+                {
+                    editor.WriteMessage("\n选择的实体不是多段线。");
+                }
+
+                tr.Commit();
+            }
         }
     }
 }

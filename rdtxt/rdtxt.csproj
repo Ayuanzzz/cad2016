@@ -51,6 +51,9 @@
       <HintPath>..\..\..\App\2016cad\AutoCAD 2016\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="DotNetArX">
+      <HintPath>..\..\CADDOTNET\DotNetArX\DotNetArX\bin\Debug\DotNetArX.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=26cf6d85ba68fa54, processorArchitecture=MSIL">
       <HintPath>packages\NetOffice.Excel.1.7.4.4\lib\net45\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -78,19 +81,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addXData.cs" />
+    <Compile Include="Ccolor.cs" />
     <Compile Include="center.cs" />
     <Compile Include="colorBylayer.cs" />
     <Compile Include="help.cs" />
+    <Compile Include="mHeight.cs" />
+    <Compile Include="modifyHMode.cs" />
+    <Compile Include="modifyTmp.cs" />
+    <Compile Include="modifyTextStyle.cs" />
     <Compile Include="modifyType.cs" />
+    <Compile Include="moveText.cs" />
     <Compile Include="replaceByExcel.cs" />
     <Compile Include="replaceText.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="closeDWG.cs" />
+    <Compile Include="slopeSplitText.cs" />
     <Compile Include="splitText.cs" />
     <Compile Include="breakLine.cs" />
     <Compile Include="addwipeout.cs" />
-    <Compile Include="TypedValueList.cs" />
+    <Compile Include="textAndColor.cs" />
+    <Compile Include="add500TK.cs" />
     <Compile Include="XData.cs" />
+    <Compile Include="xzDeleteText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
